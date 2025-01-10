@@ -1,20 +1,4 @@
-#include <iostream>
-using namespace std;
 
-// Function prototypes
-void displayBoard(char board[]);
-bool checkWin(char board[], char player);
-bool checkDraw(char board[]);
-void makeMove(char board[], char player);
-
-int main() {
-    char board[9] = {'1', '2', '3', '4', '5', '6', '7', '8', '9'};
-    char player = 'X';
-    bool gameOn = true;
-
-    while (gameOn) {
-        displayBoard(board);
-        makeMove(board, player);
         
         if (checkWin(board, player)) {
             displayBoard(board);
